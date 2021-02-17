@@ -1,7 +1,9 @@
-version: '3'
+version: '3.8'
 services:
   cas:
     build: .
     ports:
      - "8443:8443"
      - "8080:8080"
+    volumes:
+     - ./etc/cas/config/cas.properties:/etc/cas/config/cas.properties
