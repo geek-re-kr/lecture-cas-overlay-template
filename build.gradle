@@ -95,12 +95,16 @@ dependencies {
     implementation "org.apereo.cas:cas-server-support-jpa-service-registry:${casServerVersion}"
 
     implementation "org.apereo.cas:cas-server-support-jdbc:${casServerVersion}"
+    implementation "org.apereo.cas:cas-server-support-person-directory:${casServerVersion}"
 
 //    implementation "org.apereo.cas:cas-server-support-duo:${casServerVersion}"
     implementation "org.apereo.cas:cas-server-support-yubikey:${casServerVersion}"
-//    implementation "org.apereo.cas:cas-server-support-yubikey-jpa:${casServerVersion}"
+    implementation "org.apereo.cas:cas-server-support-yubikey-core:${casServerVersion}"
+    implementation "org.apereo.cas:cas-server-support-yubikey-core-mfa:${casServerVersion}"
+    implementation "org.apereo.cas:cas-server-support-yubikey-jpa:${casServerVersion}"
+    implementation "org.apereo.cas:cas-server-support-trusted-mfa-jdbc:${casServerVersion}"
 
-    implementation "org.apereo.cas:cas-server-support-monitor:${casServerVersion}"
+//    implementation "org.apereo.cas:cas-server-support-monitor:${casServerVersion}"
 
 //    implementation "org.apereo.cas:cas-server-support-jdbc-drivers:${casServerVersion}"
     implementation "org.apereo.cas:cas-server-support-pm-webflow:${casServerVersion}"

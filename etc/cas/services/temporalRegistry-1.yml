@@ -1,7 +1,7 @@
 --- !<org.apereo.cas.services.RegexRegisteredService>
 serviceId: "testId"
 name: "YAML"
-id: 1000
+id: 2000
 description: "description"
 attributeReleasePolicy: !<org.apereo.cas.services.ReturnAllAttributeReleasePolicy> {}
 accessStrategy: !<org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy>
