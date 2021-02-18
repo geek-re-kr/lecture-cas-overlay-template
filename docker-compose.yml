@@ -24,6 +24,11 @@ services:
     ports:
      - "8443:8443"
      - "8080:8080"
+    env_file:
+      - .env
     volumes:
+     - ./etc/cas/config/application.yml:/etc/cas/config/application.yml
+     - ./etc/cas/config/log4j2.xml:/etc/cas/config/log4j2.xml
      - ./etc/cas/config/cas.properties:/etc/cas/config/cas.properties
+     - ./etc/cas/config/yubikey.json:/etc/cas/config/yubikey.json
      - ./etc/cas/services/:/etc/cas/services/

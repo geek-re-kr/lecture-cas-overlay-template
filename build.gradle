@@ -85,6 +85,8 @@ dependencies {
     implementation "org.apereo.cas:cas-server-webapp-init:${casServerVersion}"
     implementation "org.apereo.cas:cas-server-webapp-undertow:${casServerVersion}"
 //    implementation "org.apereo.cas:cas-server-support-logback:${casServerVersion}"
+//    implementation "org.slf4j:slf4j-api:1.7.5"
+//    implementation "org.slf4j:slf4j-simple:1.6.4"
 
     //  support
     implementation "org.apereo.cas:cas-server-support-redis-ticket-registry:${casServerVersion}"
@@ -94,8 +96,9 @@ dependencies {
 
     implementation "org.apereo.cas:cas-server-support-jdbc:${casServerVersion}"
 
-    implementation "org.apereo.cas:cas-server-support-duo:${casServerVersion}"
+//    implementation "org.apereo.cas:cas-server-support-duo:${casServerVersion}"
     implementation "org.apereo.cas:cas-server-support-yubikey:${casServerVersion}"
+//    implementation "org.apereo.cas:cas-server-support-yubikey-jpa:${casServerVersion}"
 
     implementation "org.apereo.cas:cas-server-support-monitor:${casServerVersion}"
 

@@ -278,6 +278,12 @@ task getResource(group: "CAS", description: "Fetch a CAS resource and move it in
 
     doFirst {
         def resourceName = project.getProperty("resourceName")
+        if (resourceName == null) {
+            resourceName = project.getProperty("resourceNames")
+        }
+        def resourceNameArr = resourceName.split(",")
+
+
 
         def results = fileTree(explodedResourcesDir).matching {
             include "**/${resourceName}.*"
