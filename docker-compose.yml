@@ -16,6 +16,8 @@ services:
       - MARIADB_DATABASE=cas
     ports:
       - 3306:3306
+    volumes:
+      - ./seed/init-blog.sql:/docker-entrypoint-initdb.d/init-blog.sql
 
   cas:
     build: .

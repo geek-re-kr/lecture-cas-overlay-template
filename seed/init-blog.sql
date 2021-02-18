@@ -11,7 +11,6 @@ CREATE TABLE `Users` (
                          PRIMARY KEY (`id`)
 );
 
-# Creating this table now, will be used for the PM section of the tutorial
 CREATE TABLE `Questions` (
                              `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
                              `userid` varchar(255) NOT NULL DEFAULT '',
@@ -24,6 +23,9 @@ INSERT INTO Users  (userid, password, email, phone, firstName, lastName, expired
 VALUES
 ('LegitUser', 'passw0rd', 'test1@test.net', '111-867-5309', 'Legit', 'User', 0, 0),
 ('ExpiredUser', 'passw0rd', 'test2@test.net', '111-867-5310', 'Expired', 'User', 1, 0);
+
+UPDATE Users SET password='$2y$10$PKPHk37ll75.luYyJEVpiO81Axx0RxIY2Ew71e0h2WYptqT/k5rCG%' WHERE userid='LegitUser';
+UPDATE Users SET password='$2y$10$4jIh05jORp7kbFoZSo2zceSfm.zBlJaEAhJwVzRRVjM7WdmNYnh3K%' WHERE userid='ExpiredUser';
 
 # Adding these questions now, will be used for the PM section of the tutorial
 INSERT INTO Questions  (userid, question, answer)

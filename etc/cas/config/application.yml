@@ -1,0 +1,21 @@
+logging:
+  level:
+    org.apereo: DEBUG
+#  config: file:/etc/cas/config/log4j2.xml
+  config: file:/etc/cas/config/logback.groovy
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  ssl:
+    enabled: false
+
+spring:
+  mail:
+    host: localhost
+    password: ''
+    port: 25
+    username: ''
+    properties:
+        mail.smtp.auth: false
