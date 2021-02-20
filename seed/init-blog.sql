@@ -8,6 +8,7 @@ CREATE TABLE `Users` (
                          `lastName` varchar(255) DEFAULT NULL,
                          `expired` int(11) NOT NULL DEFAULT '0',
                          `disabled` int(11) NOT NULL DEFAULT '0',
+                         `memberOf` varchar(255) NOT NULL DEFAULT 'slave',
                          PRIMARY KEY (`id`)
 );
 
@@ -19,10 +20,10 @@ CREATE TABLE `Questions` (
                              PRIMARY KEY (`id`)
 );
 
-INSERT INTO Users  (userid, password, email, phone, firstName, lastName, expired, disabled)
+INSERT INTO Users  (userid, password, email, phone, firstName, lastName, expired, disabled, memberOf)
 VALUES
-('LegitUser', 'passw0rd', 'test1@test.net', '111-867-5309', 'Legit', 'User', 0, 0),
-('ExpiredUser', 'passw0rd', 'test2@test.net', '111-867-5310', 'Expired', 'User', 1, 0);
+('LegitUser', 'passw0rd', 'test1@test.net', '111-867-5309', 'Legit', 'User', 0, 0, 'master'),
+('ExpiredUser', 'passw0rd', 'test2@test.net', '111-867-5310', 'Expired', 'User', 1, 0, 'slave');
 
 UPDATE Users SET password='$2y$10$PKPHk37ll75.luYyJEVpiO81Axx0RxIY2Ew71e0h2WYptqT/k5rCG' WHERE userid='LegitUser';
 UPDATE Users SET password='$2y$10$4jIh05jORp7kbFoZSo2zceSfm.zBlJaEAhJwVzRRVjM7WdmNYnh3K' WHERE userid='ExpiredUser';

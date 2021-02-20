@@ -89,7 +89,7 @@ dependencies {
 //    implementation "org.slf4j:slf4j-simple:1.6.4"
 
     //  support
-    implementation "org.apereo.cas:cas-server-support-redis-ticket-registry:${casServerVersion}"
+//    implementation "org.apereo.cas:cas-server-support-redis-ticket-registry:${casServerVersion}"
 
     implementation "org.apereo.cas:cas-server-support-yaml-service-registry:${casServerVersion}"
     implementation "org.apereo.cas:cas-server-support-jpa-service-registry:${casServerVersion}"
@@ -98,9 +98,9 @@ dependencies {
     implementation "org.apereo.cas:cas-server-support-person-directory:${casServerVersion}"
 
 //    implementation "org.apereo.cas:cas-server-support-duo:${casServerVersion}"
-    implementation "org.apereo.cas:cas-server-support-yubikey:${casServerVersion}"
-    implementation "org.apereo.cas:cas-server-support-yubikey-core:${casServerVersion}"
-    implementation "org.apereo.cas:cas-server-support-yubikey-core-mfa:${casServerVersion}"
+//    implementation "org.apereo.cas:cas-server-support-yubikey:${casServerVersion}"
+//    implementation "org.apereo.cas:cas-server-support-yubikey-core:${casServerVersion}"
+//    implementation "org.apereo.cas:cas-server-support-yubikey-core-mfa:${casServerVersion}"
     implementation "org.apereo.cas:cas-server-support-yubikey-jpa:${casServerVersion}"
     implementation "org.apereo.cas:cas-server-support-trusted-mfa-jdbc:${casServerVersion}"
 

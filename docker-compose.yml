@@ -22,8 +22,8 @@ services:
   cas:
     build: .
     ports:
-     - "8443:8443"
-     - "8080:8080"
+#     - "8443:8443"
+     - "8081:8081"
     env_file:
       - .env
     volumes:
@@ -33,3 +33,10 @@ services:
 #     - ./etc/cas/config/cas.properties:/etc/cas/config/cas.properties
 #     - ./etc/cas/config/yubikey.json:/etc/cas/config/yubikey.json
 #     - ./etc/cas/services/:/etc/cas/services/
+
+#  management:
+#    build: .
+#    ports:
+#      - "8080:8080"
+#    volumes:
+#      - ./etc/cas/:/etc/cas/
