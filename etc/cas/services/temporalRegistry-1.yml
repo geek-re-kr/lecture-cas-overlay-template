@@ -1,0 +1,9 @@
+--- !<org.apereo.cas.services.RegexRegisteredService>
+serviceId: "testId"
+name: "YAML"
+id: 2000
+description: "description"
+attributeReleasePolicy: !<org.apereo.cas.services.ReturnAllAttributeReleasePolicy> {}
+accessStrategy: !<org.apereo.cas.services.DefaultRegisteredServiceAccessStrategy>
+  enabled: true
+  ssoEnabled: true

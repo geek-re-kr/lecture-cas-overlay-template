@@ -1,7 +1,42 @@
-version: '3'
+version: '3.8'
+
 services:
+
+  data-redis:
+    image: bitnami/redis:6.0
+    environment:
+      - REDIS_PASSWORD=passw0rd
+    ports:
+      - 6379:6379
+
+  data-mariadb:
+    image: bitnami/mariadb:10.5
+    environment:
+      - MARIADB_ROOT_PASSWORD=passw0rd
+      - MARIADB_DATABASE=cas
+    ports:
+      - 3306:3306
+    volumes:
+      - ./seed/init-blog.sql:/docker-entrypoint-initdb.d/init-blog.sql
+
   cas:
     build: .
     ports:
-     - "8443:8443"
-     - "8080:8080"
+#      - "8443:8443"
+      - "8081:8081"
+    env_file:
+      - .env
+    volumes:
+      - ./etc/cas/:/etc/cas/
+#     - ./etc/cas/config/application.yml:/etc/cas/config/application.yml
+#     - ./etc/cas/config/log4j2.xml:/etc/cas/config/log4j2.xml
+#     - ./etc/cas/config/cas.properties:/etc/cas/config/cas.properties
+#     - ./etc/cas/config/yubikey.json:/etc/cas/config/yubikey.json
+#     - ./etc/cas/services/:/etc/cas/services/
+
+#  management:
+#    build: .
+#    ports:
+#      - "8080:8080"
+#    volumes:
+#      - ./etc/cas/:/etc/cas/
